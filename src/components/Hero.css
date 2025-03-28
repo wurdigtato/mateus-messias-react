@@ -1,0 +1,52 @@
+.heroContainer {
+  width: 100%;
+  background-color: #393d3f;
+  font-family: 'Poppins', sans-serif;
+}
+
+.heroContainer img {
+  width: 100%;
+  opacity: 0.7;
+  z-index: -1;
+}
+
+.socialMedia {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  background-color: #393d3f;
+  padding: 1rem 0;
+}
+
+.socialMedia a {
+  display: flex;
+  align-items: center;
+}
+
+.socialMedia h3 {
+  width: 300px;
+  color: #b9b6b5;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.socialMedia span {
+  color: #62929e;
+  font-weight: 400;
+}
+
+.socialMedia a {
+  font-size: 3rem;
+  color: #b9b6b5;
+  transition: color 0.4s ease-out, transform 0.4s ease-out, filter 0.4s ease-out,
+    scale 0.4s ease-out;
+}
+
+.socialMedia a:hover {
+  color: #62929e;
+  transform: translateY(-3px);
+  scale: 105%;
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
+}

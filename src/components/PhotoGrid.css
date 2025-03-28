@@ -1,0 +1,32 @@
+.photogrid {
+  position: relative;
+  width: 500px;
+  height: 380px;
+  overflow: hidden;
+  /* background-color: rgba(57, 61, 63, 0.7); */
+}
+
+.photogrid img {
+  border-radius: 20px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0; /* Inicialmente invisível */
+  transition: opacity 1s ease, transform 1s ease; /* Animação suave */
+  z-index: 1; /* Todas as imagens começam no fundo */
+}
+
+.photogrid img.active {
+  opacity: 1; /* Torna visível */
+  z-index: 2; /* Traz a imagem ativa para frente */
+  transform: scale(1); /* Imagem no tamanho normal */
+}
+
+.photogrid img.inactive {
+  opacity: 0; /* Invisível */
+  z-index: 1; /* Mantém as imagens inativas no fundo */
+  transform: scale(0.97); /* Reduz ligeiramente o tamanho */
+}

@@ -1,0 +1,150 @@
+.works-container {
+  background-color: #393d3f;
+  width: 100%;
+  padding: 8rem 18rem;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+}
+
+.works-container::before {
+  background-image: url(../../public/texture.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.2;
+  filter: brightness(50%);
+  z-index: 0;
+}
+
+.works-container > h2 {
+  font-size: 2rem;
+  /* margin-bottom: 3rem; */
+  color: #62929e;
+}
+
+.works-container > h4 {
+  margin-bottom: 3rem;
+  color: #b9b6b5;
+  font-weight: 400;
+}
+
+.card-container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  transition: transform 0.5s ease; /* Apenas animação de movimento */
+}
+
+.card-container.slide-down {
+  transform: translateY(50px); /* Move para baixo */
+  transform: scale(0.8);
+}
+
+.card > h5 {
+  color: #aa8e7e;
+  font-size: 1.6rem;
+  margin: 1rem 0;
+}
+
+.card > p {
+  color: #b9b6b5;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  width: 400px;
+  text-align: justify;
+}
+
+.destaque {
+  color: #62929e;
+  font-weight: 700;
+}
+
+.video-card-image {
+  width: 400px;
+  height: 225px;
+  cursor: pointer;
+  filter: grayscale(0.3);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
+  transition: filter 0.4s ease-out, transform 0.4s ease-out;
+}
+
+.video-card-image:hover {
+  filter: grayscale(0);
+  transform: scale(1.01);
+}
+
+.bigVideo {
+  width: 100%;
+  background-color: rgba(98, 146, 158, 0.2);
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  opacity: 0; /* Inicialmente invisível */
+  max-height: 0; /* Inicialmente escondido */
+  overflow: hidden;
+  transition: opacity 0.2s ease-out, max-height 0.5s ease-in-out,
+    padding 0.6s ease-in-out; /* Animação */
+}
+
+.bigVideo.show {
+  opacity: 1; /* Torna visível */
+  padding: 3rem 0;
+  max-height: 500px; /* Define a altura máxima */
+}
+
+.bigVideo > div {
+  z-index: 1;
+}
+
+.player {
+  border-radius: 1000px;
+}
+
+.bigVideo > .ReactModal__Overlay {
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 1000;
+}
+
+.bigVideo > .ReactModal__Content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 200px;
+  outline: none;
+}
+
+.fechar {
+  margin-left: 1rem;
+  background-color: #62929e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  transform: scale(0.9);
+  opacity: 0.8;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.fechar:hover {
+  opacity: 1;
+  transform: scale(1);
+  transform: rotate(90deg);
+}
