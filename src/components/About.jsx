@@ -1,6 +1,6 @@
 import { FaPlus } from 'react-icons/fa6';
 import './About.css';
-import PhotoGrid from './PhotoGrid';
+import PhotoCarrossel from './PhotoCarrossel';
 
 function About() {
   return (
@@ -27,7 +27,7 @@ function About() {
           </i>
         </a>
       </div>
-      <PhotoGrid />
+      <PhotoCarrossel />
     </section>
   );
 }

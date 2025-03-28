@@ -8,11 +8,11 @@ import pic6 from '../../public/mmpic6.jpg';
 import pic7 from '../../public/mmpic7.jpg';
 import pic8 from '../../public/mmpic8.jpg';
 import pic9 from '../../public/mmpic9.jpg';
-import './PhotoGrid.css';
+import './PhotoCarrossel.css';
 
 const images = [pic1, pic2, pic3, pic4, pic5, pic6, pic7, pic8, pic9];
 
-function PhotoGrid() {
+function PhotoCarrossel() {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -24,7 +24,7 @@ function PhotoGrid() {
   }, []);
 
   return (
-    <div className="photogrid">
+    <div className="photocarrossel">
       {images.map((image, imgIndex) => (
         <img
           key={imgIndex}
@@ -37,4 +37,4 @@ function PhotoGrid() {
   );
 }
 
-export default PhotoGrid;
+export default PhotoCarrossel;

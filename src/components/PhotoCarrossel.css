@@ -1,4 +1,4 @@
-.photogrid {
+.photocarrossel {
   position: relative;
   width: 500px;
   height: 380px;
@@ -8,7 +8,7 @@
   box-shadow: 0 2px 5px #202020;
 }
 
-.photogrid img {
+.photocarrossel img {
   position: absolute;
   top: 0;
   left: 0;
@@ -19,13 +19,13 @@
   z-index: 1; /* Todas as imagens começam no fundo */
 }
 
-.photogrid img.active {
+.photocarrossel img.active {
   opacity: 1; /* Torna visível */
   z-index: 2; /* Traz a imagem ativa para frente */
   transform: scale(1); /* Imagem no tamanho normal */
 }
 
-.photogrid img.inactive {
+.photocarrossel img.inactive {
   opacity: 0; /* Invisível */
   z-index: 1; /* Mantém as imagens inativas no fundo */
   transform: scale(0.97); /* Reduz ligeiramente o tamanho */
